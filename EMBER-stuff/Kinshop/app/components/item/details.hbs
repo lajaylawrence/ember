@@ -1,0 +1,34 @@
+{{!-- description --}}
+<div class="product-details">
+
+    <section>
+        <h5 class="details-page-text">{{@name}}</h5>
+
+        <div class="text-warning">
+            {{!-- these are font-awesome's icons --}}
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+    </section>
+
+    <section class="prices-box">
+        <del class="small text-black-50"> $157</del>
+        <i class="text-danger font-weight-bold">$99</i>
+    </section>
+
+{{#if @colors}}
+    <div>
+        <h5>Color</h5>
+        <div class="product-colors active-{{@color}}"> {{! use @ to get arguments passded to component}}
+            {{#each @colors as |colorInfo|}}
+                <span class="product-color {{concat 'color-' colorInfo.color}}"  {{on "click" (fn @onChangeColor colorInfo.color) }} ></span> {{! use fn to pass arguement into a function from the front end}}
+            {{/each}}
+            
+        </div>
+    </div>
+{{/if}}
+
+</div>

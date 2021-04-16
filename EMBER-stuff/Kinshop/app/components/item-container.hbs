@@ -1,0 +1,17 @@
+
+{{!-- 
+testing using event listeners 
+<h1> Number: {{this.number}} </h1>
+<button {{on "click" this.addNumber}} > Add </button>
+
+ --}}
+
+<LinkTo @route="item" @model={{@product.id}} class="product {{@class1}}"> 
+
+{{!-- nested component --}}
+<Item::Image @image={{this.image}}/>
+
+{{!-- nested component --}}
+<Item::Details @name={{@product.name}} />
+
+</LinkTo>

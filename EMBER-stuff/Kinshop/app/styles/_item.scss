@@ -1,0 +1,152 @@
+.product-image {
+  background: linear-gradient(to top, #2193b0, #6dd5ed);
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s ease-in-out;
+
+  > img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.product-details {
+  padding: 2px 5px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s ease-in-out;
+
+  .details-page-text {
+    font-size: 12px;
+    flex-wrap: break-word;
+  }
+
+  .product-color {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    border: 4px solid #fff;
+    box-shadow: inset 0 0 2px grey;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      width: 24px;
+      height: 24px;
+      content: ' ';
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      border-radius: 50%;
+    }
+
+    &.color-red {
+      background: #e74c3c;
+    }
+
+    &.color-black {
+      background: black;
+    }
+  }
+
+  .active-red .color-red:before {
+    border: 1px solid #c0392b;
+  }
+
+  .active-black .color-black:before {
+    border: 1px solid #2c3e50;
+  }
+}
+
+.product {
+  width: 700px;
+  height: 100px;
+  margin: 0 10px 50px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: -20px 10px 30px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  color: #333;
+  border-radius: 10px;
+  &:hover {
+    text-decoration: none;
+    color: #333;
+  }
+
+   &.is-zoomed {
+    .product-image {
+      width: 100%;
+    }
+    .product-details {
+      width: 0;
+      padding: 0;
+    }
+  }
+
+
+}
+
+.item-details-page {
+  width: 50%;
+  box-shadow: none;
+  border-radius: 10px;
+  margin: 20px;
+  height: 200px;
+  
+ 
+  .product-details {
+    margin-left: 20px;
+    padding: 10px 20px;
+    .details-page-text{
+      font-size: 30px;
+    }
+  }
+}
+
+.homepage-second-flex {
+    flex-direction: column;
+    width: 500;
+    height: 200px;
+    border-radius: 3px;
+
+    .product-image {
+      width: 100%;
+      height: 50%;
+    }
+    .product-details{
+      width: 100%;
+    }
+}
+
+
+.homepage-second-flex1{
+  margin: 10px 10px ;
+  box-shadow: none;
+}
+
+.features{
+  width: 50%;
+  margin: auto 20px;
+  padding-right: 10px;
+
+}
+
+.item-page-ad{
+  height: 500px;
+  width: 500px;
+  background-image: url('/assets/images/pet11.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+  float: right;
+  margin: 10px;
+}
+
+.icons{
+  margin-left: 10px;
+}

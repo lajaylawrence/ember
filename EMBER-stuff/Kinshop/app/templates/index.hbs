@@ -1,0 +1,73 @@
+{{!-- Main page, the outlet in application.hbs automatically loads index.hbs once no other path is specified --}}
+{{!-- ------------------------------------------------------------ --}}
+
+<GeneralContainer>
+   {{!-- link to another page--}}
+
+<div class="index-container1">
+   <h5>Filter <i class="fa fa-filter icons "></i></h5>
+   <h5>Whats new <i class="fa fa-plus icons "></i></h5>
+   <h5>Colors <i class="fa fa-thumb-tack icons "></i></h5>
+   <h5>Compare <i class="fa fa-compress icons "></i></h5>
+
+</div>
+
+
+
+  <div class="index-container2">
+
+{{!-- -------------------------------- --}}
+     <div class="index-container2-1">
+      <h5><i><b>Categories</b></i><i class="fa fa-paw icons"></i><br/><br/> <span>Treats</span><br />Litter <br />Cats <br />Dogs <br />Food<br /> Personal </h5>
+      <h5 class="price-range">Price Range <i class="fa fa-credit-card icons"></i><input/></h5>
+    <h5><i><b>Brand</b></i> <i class="fa fa-gitlab" aria-hidden="true"></i><br /><br />Treats<br />Litter <br />Cats <br />Dogs </h5>
+      <img src="/assets/images/pet4.png" alt="" class="" />
+     </div>
+
+{{!-- -------------------------------- --}}
+     <div class="index-container2-2">
+
+      <div class="homepage-container1">
+         {{#each this.model as |product| }}
+         <ItemContainer @product={{product}} @class1='homepage-second-flex1' />
+         {{/each}}
+      </div>
+      
+      <div class="homepage-text2">
+         <h5 class="selected"> Featured Products</h5>
+         <h5> Latest Products</h5>
+         <h5> New Products</h5>
+      </div>
+      
+      <div class="homepage-container1">
+         {{#each this.model as |product| }}
+         <ItemContainer @product={{product}} @class1='homepage-second-flex' />
+         {{/each}}
+      </div>
+      
+      <div class="main-container2">
+      
+         <div class="container2-image1"></div>
+      
+         <div class="homepage-container2">
+            {{#each this.model as |product| }}
+            <ItemContainer @product={{product}} @class1='homepage-second-flex2' />
+            {{/each}}
+         </div>
+      
+         <div class="homepage-container2">
+            {{#each this.model as |product| }}
+            <ItemContainer @product={{product}} @class1='homepage-second-flex2' />
+            {{/each}}
+         </div>
+      
+         <div class="container2-image2"></div>
+      
+      </div>
+     </div>
+  </div>
+   
+
+
+</GeneralContainer>
+

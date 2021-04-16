@@ -1,0 +1,53 @@
+ember helpers
+
+{{on - 
+
+{{on "click" @somefunction}} [listens for event]
+========================================
+{{concat - 
+
+class={{ concat "active-" @color }} [combines arguments into a string]
+==========================================
+{{get
+
+{{get this.product "name"}}  [getting an item with a given  key so equivalent to this.product.name]
+=========================================
+{{hash
+
+@user={{hash 
+        firstname='shawn'
+        lastname='chen'
+        }}                     [creates a js object inside a template]
+=========================================
+{{let   [creates a temporary variable]
+
+{{#let this.firstname
+   as |fullname|
+   }}
+   <h1>{{fullName}}</h1>
+{{/let}}
+===========================================   
+{{if
+
+{{if this.isRed 'red'  'black'}} [returns first value if true]
+
+AND
+
+{{#if this.isRed}}
+some content
+{{else}}  [ther is also else if]
+someother content
+{{/if}}
+=========================================================
+{{unless
+
+
+[used same as if but means opposite of if]
+=========================================================
+{{each
+                            [iterate arrays etc]
+{{#each list as |item|}}
+
+    {{item.name}}
+
+{{/each}}    
